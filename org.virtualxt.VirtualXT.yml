@@ -15,24 +15,10 @@ finish-args:
   - --device=all
 
 modules:
-  - name: SDL2
-    buildsystem: autotools
-    config-opts:
-      - --disable-video-wayland
-    cleanup:
-      - /bin
-      - /include
-      - /lib/pkgconfig
-      - /share
-    sources:
-      - type: archive
-        url: https://github.com/libsdl-org/SDL/releases/download/release-2.24.1/SDL2-2.24.1.tar.gz
-        sha256: bc121588b1105065598ce38078026a414c28ea95e66ed2adab4c44d80b309e1b
-
   - name: virtualxt
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/ziglang/zig build -Drelease-fast
+      - /usr/lib/sdk/ziglang/zig build -Drelease-fast -Dv20
 
       - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
       - install -Dm00644 bios/pcxtbios.bin $FLATPAK_DEST/share/virtualxt/pcxtbios.bin
