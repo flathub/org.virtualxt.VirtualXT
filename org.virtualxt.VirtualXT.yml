@@ -31,6 +31,8 @@ modules:
 
   - name: virtualxt
     buildsystem: simple
+    only-arches:
+      - x86_64
     build-commands:
       - /usr/lib/sdk/ziglang/zig build -Drelease-fast
 
