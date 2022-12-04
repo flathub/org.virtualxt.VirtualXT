@@ -6,7 +6,7 @@
   <summary>VirtualXT is an IBM PC/XT emulator that runs on modern hardware and operating systems.</summary>
   
   <metadata_license>FSFAP</metadata_license>
-  <project_license>Zlib</project_license>
+  <project_license>zlib-acknowledgement</project_license>
   
   <recommends>
     <control>pointing</control>
@@ -22,19 +22,19 @@
   <launchable type="desktop-id">org.virtualxt.VirtualXT.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://virtualxt.org/images/screenshot0.png</image>
+      <image>https://virtualxt.org/old_page/images/screenshot0.png</image>
     </screenshot>
     <screenshot>
-      <image>https://virtualxt.org/images/screenshot1.png</image>
+      <image>https://virtualxt.org/old_page/images/screenshot1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://virtualxt.org/images/screenshot2.png</image>
+      <image>https://virtualxt.org/old_page/images/screenshot2.png</image>
     </screenshot>
     <screenshot>  
-      <image>https://virtualxt.org/images/screenshot4.png</image>
+      <image>https://virtualxt.org/old_page/images/screenshot4.png</image>
     </screenshot>
     <screenshot>
-      <image>https://virtualxt.org/images/screenshot6.png</image>
+      <image>https://virtualxt.org/old_page/images/screenshot6.png</image>
     </screenshot>
   </screenshots>
 
@@ -46,7 +46,7 @@
   <update_contact>mail@andreasjonsson.se</update_contact>
 
   <releases>
-    <release version="0.6.1" date="2021-06-01"/>
+    <release version="0.7.0" date="2022-12-04"/>
   </releases>
 
   <!-- Generate the oars rating at: https://hughsie.github.io/oars/generate.html -->
