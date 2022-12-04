@@ -45,8 +45,12 @@ modules:
 
       - install -Dm00755 tools/package/flatpak/virtualxt.freedos $FLATPAK_DEST/bin/virtualxt.freedos
       - install -Dm00644 tools/package/flatpak/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
-      - install -Dm00644 tools/package/flatpak/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
+      
+      - install -Dm00644 $FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
     sources:
       - type: archive
         url: https://github.com/andreas-jonsson/virtualxt/archive/v0.7.tar.gz
         sha256: 3077257ecd643749e29f9a7d3d1418fbeacc23f422b83bd398ebb8e5adf3a4f4
+
+      - type: file
+        path: org.virtualxt.VirtualXT.appdata.xml
