@@ -18,7 +18,7 @@ modules:
   - name: virtualxt
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/ziglang/zig build -Drelease-fast -Dv20
+      - /usr/lib/sdk/ziglang/zig build -Drelease-fast -Dv20 -Dpcap
 
       - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
       - install -Dm00644 bios/pcxtbios.bin $FLATPAK_DEST/share/virtualxt/pcxtbios.bin
