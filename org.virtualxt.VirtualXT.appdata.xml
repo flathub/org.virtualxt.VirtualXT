@@ -3,7 +3,7 @@
   <id>org.virtualxt.VirtualXT</id>
   
   <name>VirtualXT</name>
-  <summary>VirtualXT is an IBM PC/XT emulator that runs on modern hardware and operating systems.</summary>
+  <summary>Turbo PC/XT emulator</summary>
   
   <metadata_license>FSFAP</metadata_license>
   <project_license>zlib-acknowledgement</project_license>
@@ -15,7 +15,7 @@
   
   <description>
     <p>
-      VirtualXT is an IBM PC/XT emulator that runs on modern hardware and operating systems. It is designed to be simple and lightweight yet still capable enough to run a large library of old application and games.
+      VirtualXT is a Turbo PC/XT emulator that runs on modern hardware and operating systems. It is designed to be simple and lightweight yet still capable enough to run a large library of old application and games.
     </p>
   </description>
   
@@ -46,6 +46,8 @@
   <update_contact>mail@andreasjonsson.se</update_contact>
 
   <releases>
+    <release version="0.9.0" date="2023-07-07"/>
+    <release version="0.8.0" date="2023-04-18"/>
     <release version="0.7.0" date="2022-12-04"/>
   </releases>
 
