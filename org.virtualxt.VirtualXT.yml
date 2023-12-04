@@ -28,8 +28,8 @@ modules:
   - name: virtualxt
     buildsystem: simple
     build-commands:
-      - premake5 --modules=-network,fdc gmake
-      - make sdl2-frontend modules
+      - premake5 --modules=-network gmake
+      - make sdl2-frontend
 
       - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
       - install -Dm00755 build/bin/libvxt.so $FLATPAK_DEST/bin/libvxt.so
@@ -42,7 +42,7 @@ modules:
       - install -Dm00644 bios/vgabios.bin $FLATPAK_DEST/share/virtualxt/vgabios.bin
       - install -Dm00644 boot/freedos.img $FLATPAK_DEST/share/virtualxt/freedos.img
       - install -Dm00644 boot/freedos_hd.img $FLATPAK_DEST/share/virtualxt/freedos_hd.img
-      - install -Dm00644 boot/elks.img $FLATPAK_DEST/share/virtualxt/elks.img
+      - install -Dm00644 boot/elks_hd.img $FLATPAK_DEST/share/virtualxt/elks_hd.img
 
       - install -Dm00644 tools/icon/icon.png $FLATPAK_DEST/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
 
@@ -52,8 +52,8 @@ modules:
       - install -Dm00644 $FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/andreas-jonsson/virtualxt/archive/v0.10.tar.gz
-        sha256: 59b1964c2543630d99bc049b520fac4083975716d72ed16de164eb8bc56ec6ce
+        url: https://github.com/andreas-jonsson/virtualxt/archive/v0.11.tar.gz
+        sha256: 625a88e12e2ca1ecef2c3de29a8f5b1e64b17f109b0e4ea2a081003de072a16b
 
       - type: file
         path: org.virtualxt.VirtualXT.appdata.xml
