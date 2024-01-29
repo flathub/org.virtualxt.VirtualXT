@@ -29,7 +29,7 @@ modules:
     buildsystem: simple
     build-commands:
       - premake5 --modules=-network gmake
-      - make sdl2-frontend
+      - CFLAGS=-DVXT_VERSION_RELEASE make sdl2-frontend
 
       - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
       - install -Dm00755 build/bin/libvxt.so $FLATPAK_DEST/bin/libvxt.so
