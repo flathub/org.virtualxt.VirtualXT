@@ -28,13 +28,11 @@ modules:
   - name: virtualxt
     buildsystem: simple
     build-commands:
-      - premake5 --modules=-network gmake
+      - premake5 gmake
       - CFLAGS=-DVXT_VERSION_RELEASE make sdl2-frontend
 
-      - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
-      - install -Dm00755 build/bin/libvxt.so $FLATPAK_DEST/bin/libvxt.so
-      - install -Dm00755 -t $FLATPAK_DEST/share/virtualxt/modules modules/*.vxt
-
+      - install -Dm00755 build/sdl2/virtualxt $FLATPAK_DEST/bin/virtualxt
+      
       - install -Dm00644 bios/pcxtbios.bin $FLATPAK_DEST/share/virtualxt/pcxtbios.bin
       - install -Dm00644 bios/GLABIOS.ROM $FLATPAK_DEST/share/virtualxt/GLABIOS.ROM
       - install -Dm00644 bios/GLaTICK_0.8.4_AT.ROM $FLATPAK_DEST/share/virtualxt/GLaTICK_0.8.4_AT.ROM
@@ -52,8 +50,8 @@ modules:
       - install -Dm00644 $FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/andreas-jonsson/virtualxt/archive/v1.0.tar.gz
-        sha256: b5662318abee4caf20e5684ad82f2b7cf38c98a3e8889127eac4d6af03e79644
+        url: https://github.com/andreas-jonsson/virtualxt/archive/v1.1.tar.gz
+        sha256: fcd390601cb091d7bdebef282f6c3280f1ea100a9b9457937f22fa6065d57ca6
 
       - type: file
         path: org.virtualxt.VirtualXT.appdata.xml
