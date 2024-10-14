@@ -31,7 +31,7 @@ modules:
       - premake5 gmake
       - CFLAGS=-DVXT_VERSION_RELEASE make sdl2-frontend
 
-      - install -Dm00755 build/bin/virtualxt $FLATPAK_DEST/bin/virtualxt
+      - install -Dm00755 build/sdl2/virtualxt $FLATPAK_DEST/bin/virtualxt
       
       - install -Dm00644 bios/pcxtbios.bin $FLATPAK_DEST/share/virtualxt/pcxtbios.bin
       - install -Dm00644 bios/GLABIOS.ROM $FLATPAK_DEST/share/virtualxt/GLABIOS.ROM
