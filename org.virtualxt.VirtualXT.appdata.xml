@@ -6,7 +6,7 @@
   <summary>Turbo PC/XT emulator</summary>
   
   <metadata_license>FSFAP</metadata_license>
-  <project_license>zlib</project_license>
+  <project_license>Zlib</project_license>
   
   <recommends>
     <control>pointing</control>
