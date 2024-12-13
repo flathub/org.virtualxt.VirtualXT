@@ -1,6 +1,6 @@
 app-id: org.virtualxt.VirtualXT
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: virtualxt.freedos
 finish-args:
@@ -16,19 +16,19 @@ modules:
   - name: premake5
     buildsystem: simple
     build-commands:
-      - make -f Bootstrap.mak linux
+      - make -C build/gmake2.unix config=release
       - install -Dm755 -t "${FLATPAK_DEST}/bin" bin/release/premake5
     cleanup:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/premake/premake-core/releases/download/v5.0.0-beta2/premake-5.0.0-beta2-src.zip
-        sha256: 4c1100f5170ae1c3bd1b4fd9458b3b02ae841aefbfc41514887b80996436dee2
+        url: https://github.com/premake/premake-core/releases/download/v5.0.0-beta3/premake-5.0.0-beta3-src.zip
+        sha256: 4b2b1fe9772ca1caf689c07e8c32f108b8393922956f602ddaf404f73467bd83
 
   - name: virtualxt
     buildsystem: simple
     build-commands:
-      - premake5 gmake
+      - premake5 gmake2
       - CFLAGS=-DVXT_VERSION_RELEASE make sdl2-frontend
 
       - install -Dm00755 build/sdl2/virtualxt $FLATPAK_DEST/bin/virtualxt
@@ -50,8 +50,8 @@ modules:
       - install -Dm00644 $FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/andreas-jonsson/virtualxt/archive/v1.1.1.tar.gz
-        sha256: 683889062cb38caea3bf6efb85be0ec4f7ef57425c25e29ea9f15c6666f2879e
+        url: https://github.com/andreas-jonsson/virtualxt/archive/v1.2.tar.gz
+        sha256: 6457f2237d4b0ab235d2372b67d2bf9010e6fd66921bce452bb5b5b400e6d8e8
 
       - type: file
         path: org.virtualxt.VirtualXT.appdata.xml
