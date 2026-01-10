@@ -15,7 +15,8 @@
   
   <description>
     <p>
-      VirtualXT is a Turbo PC/XT emulator that runs on modern hardware and operating systems. It is designed to be simple and lightweight yet still capable enough to run a large library of old application and games.
+      VirtualXT is a Turbo PC/XT emulator that runs on modern hardware and operating systems.
+      It is designed to be simple and lightweight yet still capable enough to run a large library of old application and games.
     </p>
   </description>
   
@@ -38,9 +39,10 @@
     </screenshot>
   </screenshots>
 
-  <url type="bugtracker">https://github.com/andreas-jonsson/virtualxt/issues</url>
+  <url type="bugtracker">https://codeberg.org/virtualxt/virtualxt/issues</url>
   <url type="donation">https://phix.itch.io/virtualxt/purchase</url>
-  <url type="homepage">https://virtualxt.org</url>
+  <url type="homepage">https://phix.itch.io/virtualxt</url>
+  <url type="vcs-browser">https://codeberg.org/virtualxt/virtualxt</url>
 
   <developer_name>Andreas T Jonsson</developer_name>
   <update_contact>mail@andreasjonsson.se</update_contact>
