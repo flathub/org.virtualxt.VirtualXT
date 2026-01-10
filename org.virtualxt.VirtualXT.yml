@@ -49,9 +49,9 @@ modules:
       
       - install -Dm00644 $FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
     sources:
-      - type: archive
-        url: https://github.com/andreas-jonsson/virtualxt/archive/v1.2.tar.gz
-        sha256: 6457f2237d4b0ab235d2372b67d2bf9010e6fd66921bce452bb5b5b400e6d8e8
+      - type: git
+        url: https://codeberg.org/virtualxt/virtualxt
+        tag: v1.2
 
       - type: file
         path: org.virtualxt.VirtualXT.appdata.xml
